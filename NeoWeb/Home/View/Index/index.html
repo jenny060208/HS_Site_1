@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+	rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+	line-height: inherit !important;
+}
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+	data-offset="60">
+
+	<!--Top part define-->
+	<include file="Public:main_header_sign_out" />
+
+	<!-- user part -->
+	<div id="home" class="container-fluid text-center"
+		style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+		<br>
+		<br> <br>
+		<br>
+		<p
+			style="color: #fff; font-family: sans-serif; font-size: 55px !important;">
+			宏盛留学移民，加拿大本土留学中介的第一品牌！</p>
+
+		<p
+			style="color: #cccccc; font-family: sans-serif; font-size: 35px !important;">
+			境外服务专家.</p>
+				<br>
+		<br>
+		<p
+			style="color: #dddddd; font-family: sans-serif; font-size: 25px !important; font-weight: bold;">
+			一站式服务，让您的留学之路轻松起步！</p>
+		<p
+			style="color: #dddddd; font-family: sans-serif; font-size: 25px !important; font-weight: bold;">
+			我们为留学生免费申请加拿大院校</p>
+			
+	</div>
+
+	<!-- Service part -->
+	<div id="services" class="container-fluid text-center"
+		style="background-color: #eeeeee; color: #222222; font-family: Montserrat, sans-serif; padding: 50px 25px; margin-top: 0px;">
+
+
+		<p
+			style="color: #444444; font-family: sans-serif; font-size: 25px !important;">
+			我们的服务</p>
+
+		<div class="row ">
+			<div class="col-sm-offset-1 col-sm-10">
+			
+			 <div class="col-sm-3">
+          <div class="panel panel-default" style="font-size: 25px">
+          <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold;">留学文书服务</p>
+            </div>
+            <div class="panel-body" style="height: 250px">
+              <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">单项留学文书服务</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">全套文书服务</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">网络申请咨询服务</p>
+             </div>
+            
+          </div>
+        </div>
+				<div class="col-sm-3">
+					<div class="panel panel-default" style="font-size: 25px">
+					<div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold;">免费学校申请</p>
+            </div>
+						<div class="panel-body" style="height: 250px">
+              <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">本科学校申请</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">初中高中学校申请</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">硕士学校申请</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">公立学校申请</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">语言中心|Pathway|EAP申请</p>
+						</div>
+						
+					</div>
+				</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-default" style="font-size: 25px">
+          <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold;">签证申请服务</p>
+            </div>
+            <div class="panel-body" style="height: 250px">
+              <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">首次签证</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">境内续学签</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">境内续小签</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">恢复签证</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">实习/毕业工签</p>
+              
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">桥梁工签</p>
+            </div>
+            
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+        <div class="panel panel-default" style="font-size: 25px">
+          <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold;">留学后续服务</p>
+            </div>
+            <div class="panel-body" style="height: 250px">
+              <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">作业润色</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">入学辅导</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">监护服务</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">落地服务
+              </p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">机场接机</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">机票预定</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="panel panel-default" style="font-size: 25px">
+          <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold;">移民申请服务</p>
+            </div>
+            <div class="panel-body" style="height: 250px">
+              <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">EE快速通道</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">安省省提名</p>
+                <p class="text-center"
+                style="font-size: 20px; font-weight: bold;">新省省提名</p>
+            </div>
+            
+          </div>
+			</div>
+		</div>
+		<br> <br>
+	</div>
+
+	<!-- feature part -->
+	<div id="features" class="container-fluid text-center"
+		style="background-color: #777777; color: #fff; font-family: Montserrat, sans-serif; padding: 0px 25px;">
+		<p
+			style="color: #eee; font-family: sans-serif; font-size: 50px !important; font-weight:;">
+			为什么选择宏盛留学
+			</p>
+		<br>
+		<div class="row ">
+			<div class="col-sm-offset-2 col-sm-8">
+				<div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">100%宏盛老师来自加拿大本地</p>
+            </div>
+                     
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">100%宏盛老师提供一对一咨询服务</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">80%宏盛老师拥有硕士以上学位</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">2000+学生被帮助</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">100+紧急情况处理</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="panel panel-default" style="font-size: 25px">
+            <div class="panel-header text-center">
+              <p class="text-center"
+                style="font-size: 25px; font-weight: bold; color: #222222 ">500+加拿大院校数据被收录</p>
+            </div>
+          </div>
+        </div>
+
+			</div>
+		</div>
+		<br>
+		<br>
+		
+
+
+	</div>
+
+	<!-- Solution part -->
+	<div id="solution" class="container-fluid text-center"
+		style=" font-family: Montserrat, sans-serif; padding: 50px 25px; margin-top: 0px;">
+
+    <p style="color: #eee; font-family: sans-serif; font-size: 50px !important; background-color: #eeeeee; color: #222222; font-weight:;">
+          有问题？找宏盛！
+    </p>
+
+    <p style="color: #eee; font-family: sans-serif; font-size: 40px !important; background-color: #eeeeee; color: #222222; font-weight:;">
+         宏盛，加拿大本土留学中介第一品牌，助你轻松实现出国梦！
+    </p>
+
+
+
+		<div class="row ">
+		<br>
+    <include file="Public:student_general_enquiry_msg_form" />
+		</div>
+		<br>
+		<div class="row ">
+			<div class="col-sm-offset-2 col-sm-8">
+			
+
+		
+
+				
+			</div>
+		</div>
+	</div>
+
+
+	<!-- More info part -->
+	<div id="more_info" class="container-fluid text-center"
+		style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 0px 25px;">
+		<br> <br>
+		<include file="Public:subscribe_info_form_tpl" />
+		<br>
+	</div>
+
+	<!-- business part -->
+	<div id="contact" class="container-fluid text-center"
+		style="background-color: #eeeeee; color: #fff; font-family: Montserrat, sans-serif; padding: 0px 25px;">
+		<br>
+		
+	</div>
+
+	<!-- Foot part define-->
+	<include file="Public:main_footer" />
+
+
+</body>
+</html>
