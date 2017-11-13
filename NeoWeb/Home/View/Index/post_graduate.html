@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+  href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+  src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+  src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+  rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+  line-height: inherit !important;
+}
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+  data-offset="60">
+
+  <!--Top part define-->
+  <include file="Public:main_header_sign_out" />
+
+  <!--why ontario college-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+    
+    <div class="row ">
+ <div class=" col-sm-12">
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-center" style="font-size: 25px; font-weight: bold;">
+         选择安大略省硕士研究生项目</p>
+    </div>
+
+      <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+              在加拿大安省任何一所大学硕士研究生毕业、且雅思G类总分6.0（单科不低于6.0），
+              即可直接申请安省省提名办理加拿大移民。无需工作经验、无任何附加条件。
+              在投资移民“一刀切”的今天，硕士移民项目是目前公认的“最快捷”、“费用最低”的加拿大移民方式。
+
+        </p>
+        
+       <p style="font-size: 20px; color: #222; ">
+             移民申请“无障碍”
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+           GMAT|GRE 大幅提高申请“成功率”</p>
+        
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                  硕士项目费用“较低”
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                 硕士毕业就业有保障
+        </p>
+        
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                 就学期间“可工作”
+        </p>
+       
+        
+      </div>
+            
+    </div>
+     </div>
+    </div>
+    
+  </div>
+
+<!--Apply flow-->
+<div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+     <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                     Ontario Master Program Application Time Schedule  </p>
+     <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                     加拿大安省公立学院硕士项目一般性申请流程 & 时间表 </p>                
+    
+      <div class="panel panel-default; col-sm-6" style="font-size: 25px">
+
+        <div class="panel-body; "  style="height: 650px; text-align: left;background-color: #eeeeee;color: #222;">
+         <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                     入学前一年 </p>
+        
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+          
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        3月  4月</td>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        学生准备语言考试成绩： 雅思，托福，GRE或GMAT等语言考试， 并着手准备留学担保资金</td>
+            </tr>
+            <tr>
+             <tr>
+             <td style="vertical-align: middle; padding: 10px;background-color: #3350ff; color: #dddddd;" >
+                        5月
+                                         至
+                        9月</td>
+             <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                        宏盛留学规划师为学生提供“选校报告”。 具体包括： 录取条件（CGPA最低要求，语言要求，简历要求，工作背景要求， 课程设置，
+                        学习周期，院校环境，生活成本等。 初步筛选， 确定申请院校</td>
+            </tr>
+            
+             <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        9月
+                                         至
+                        11月</td>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        根据学生实际情况最终确定目标院校。准备申请材料包。</td>
+            </tr>
+            
+           <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                        11月
+                        12月</td>
+             <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                        将完整的材料包提交给目标院校，等待院校审核</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>  
+    
+    <div class="panel panel-default; col-sm-6" style="font-size: 25px">
+
+        <div class="panel-body; "  style="height: 650px; text-align: left;background-color: #eeeeee;color: #222;">
+         <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                     入学年 </p>
+ 
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+
+       <tr>
+         <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        1月 至  7月</td>
+         <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                       与院校联络，取得OFFER。缴纳学费，申请学习签证</td>
+            </tr>
+            
+         <tr>
+         <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                        8月
+                        9月</td>
+         <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                       获得签证，提供行前指导，协助安排： 机票预订，住宿安排，接机等服务</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+        
+        
+      
+      </div>
+
+    </div>  
+    
+    
+  </div>
+  </div>
+  </div>
+
+<!--Hongsheng's help-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+      <div class="panel panel-default; " style="font-size: 25px">
+    
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                      宏盛加拿大留学规划师能帮您做什么 </p>
+        </div>
+
+        <div class="panel-body; "  style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                              根据个人情况进行“最佳择校”</td>
+            </tr>
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        制定“硕士项目申请策略”，指导进行材料准备</td>
+            </tr>
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                     填写/整理繁琐的申请文件，制作“申请材料包”</td>
+            </tr>
+            
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;">
+                     润色简历、个人简述、申请论文等文案</td>
+            </tr>
+            
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;">
+                        跟催申请进程，随时补交文件，第一时间获取OFFER</td>
+            </tr>
+            
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                           协助进行OFFER确认，最终确定“最适读院校|专业|项目”</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      
+      </div>
+      
+       <p class="text-center" style="font-size: 20px; font-weight: bold;background-color: #3350ff; color: #dddddd; ">
+             申请学院请联系我们：
+             
+       <include file="Public:student_general_contact_msg_form" />      
+    </div>  
+  </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- Foot part define-->
+  <include file="Public:main_footer" />
+
+
+</body>
+</html>

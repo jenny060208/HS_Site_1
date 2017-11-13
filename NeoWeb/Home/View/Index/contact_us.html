@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+  href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+  src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+  src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+  rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+  line-height: inherit !important;
+}
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+  data-offset="60">
+
+  <!--Top part define-->
+  <include file="Public:main_header_sign_out" />
+
+  <!-- user part -->
+  <div id="home" class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+    
+    <div class="row ">
+      <div class="col-sm-offset-1 col-sm-5">
+
+  
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-left" style="font-size: 25px; font-weight: bold;">
+          联系我们 </p>
+    </div>
+    
+    
+      <div class="panel-body" style="height: 400px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">Phone: 1- (647)-717-6789</p>
+        
+       <p style="font-size: 20px; color: #222; ">Email: abc@abccom</p>
+        <p style="font-size: 20px; font-weight: bold; ">
+              微信： abcdefg
+        </p>
+        
+        <p  style="font-size: 20px; font-weight: bold; ">
+                  Address: abc road, North York, Ontario, Canada
+        </p>
+        
+      </div>
+            
+    </div>
+       
+   
+
+    </div>
+    
+      <div class="col-sm-5">
+
+  
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-left" style="font-size: 25px; font-weight: bold;">
+          联系表格 </p>
+    </div>
+    
+    
+      <div class="panel-body" style="height: 400px; text-align: left;background-color: #eeeeee;color: #222;">
+     
+        <include file="Public:student_general_contact_msg_form" />
+        
+      </div>
+            
+    </div>
+       
+   
+
+    </div>
+    
+    
+    
+    
+    </div>
+      
+  </div>
+
+
+
+    
+
+
+  <!-- Foot part define-->
+  <include file="Public:main_footer" />
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+  href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+  src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+  src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+  rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+  line-height: inherit !important;
+}
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+  data-offset="60">
+
+  <!--Top part define-->
+  <include file="Public:main_header_sign_out" />
+
+  <!--why ontario college-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+    
+    <div class="row ">
+ <div class=" col-sm-12">
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-center" style="font-size: 25px; font-weight: bold;">
+          选择加拿大安大略省公立学院留学的6大优势 </p>
+    </div>
+
+      <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+               在加拿大，公立学院的毕业生往往要比本科毕业生更快找到工作做到“毕业即就业”。技术性较强专业的毕业生起薪更高。
+               这完全得益于公立学院贴近职场的教学内容与授课环境，同时提供大量的带薪实习机会 (Co-op)！
+               企业负责招聘的面试官更加看重应聘者的工作经验（实操性）而非学历。学院的课程不同于大学的“泛教育”，更加注重“专业提升，贴近职场”。
+
+              在上学期间，利用假期时间进行实习不仅能将课堂内容灵活转化，更能让学生近距离接触相关行业专业人士建立人脉为就业做足准备。
+              学院的课程安排摒弃了那些用处不大的纯学术的理论知识，只致力于培养可以毕业后立刻进入职场的专业型人才。
+              所以如果过你是个学术研究型人才，亦或希望毕业后持大学毕业证回国发展。公立学院可能并不适合你…
+        </p>
+        
+       <p style="font-size: 20px; color: #222; ">
+             紧贴职场， 易于就业
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+              快速移民利器</p>
+        
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                  读大学，移民两不耽误
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                 入学门槛低，提供更多学习机会
+        </p>
+        
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                 专业选择多， 为兴趣或就业而学
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                 学制短，学费底，入学时间灵活
+        </p>
+        
+      </div>
+            
+    </div>
+     </div>
+    </div>
+    
+  </div>
+
+  <!--application material-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row ">
+ <div class=" col-sm-12">
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-center" style="font-size: 25px; font-weight: bold;">
+          申请加拿大安大略省公立学院的一般性申请材料 </p>
+    </div>
+
+    <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+      
+      <table class=" table">
+        <tbody>
+          <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;" class=" col-sm-1">
+                     个人身份证明:</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" class=" col-sm-8">
+                      护照首页 或者学习签证 （如有）</td>
+           </tr>
+           <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;">
+                      学术成绩:</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" >
+                      高中/大专/大学成绩单； 或者  高中/大专/大学毕业证； 如果申请时还没有毕业，需提供现有成绩和在学证明； （注：以上为必要文件， 均需中英文件或公证件）</td>
+           </tr>
+           <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;">
+                      英文语言成绩:</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" id="merchant_report_enable_id">
+                     雅思/托福成绩单原件（如有）   （注：语言分数要求因校而异。详情请联系我们）</td>
+            </tr>
+        </tbody>
+      </table>
+      </div>
+            
+    </div>
+    
+     </div>
+    </div>
+  </div>
+
+<!--Hongsheng's help-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+      <div class="panel panel-default; " style="font-size: 25px">
+    
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                      宏盛加拿大留学规划师能帮您做什么 </p>
+        </div>
+
+        <div class="panel-body; "  style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                              根据个人情况进行“最佳择校”</td>
+            </tr>
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                         填写/整理繁琐的申请文件</td>
+            </tr>
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                     查找并最终确定“最适读专业</td>
+            </tr>
+            
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;">
+                     制定“名校升学”或“移民”规划</td>
+            </tr>
+            
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;">
+                            跟催申请进程，第一时间获取OFFER</td>
+            </tr>
+            
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                            研究录取要求+院校沟通=减免语言要求/申请材料</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      
+      </div>
+      
+       <p class="text-center" style="font-size: 20px; font-weight: bold;background-color: #3350ff; color: #dddddd; ">
+             申请学院请联系我们：
+             
+       <include file="Public:student_general_contact_msg_form" />      
+             
+             
+    </div>  
+    
+    
+        
+  </div>
+    </div>
+  </div>
+
+    
+
+
+  <!-- Foot part define-->
+  <include file="Public:main_footer" />
+
+
+</body>
+</html>

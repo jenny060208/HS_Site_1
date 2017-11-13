@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+  href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+  src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+  src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+  rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+  rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+  line-height: inherit !important;
+}
+
+.modal-ku {
+  width: 1200px;
+  margin: auto;
+}
+#privateSchoolList1Modal {
+  margin: 100px 0 0 0px;
+  /* PLAY THE WITH THE VALUES TO SEE GET THE DESIRED EFFECT */
+}
+
+#privateSchoolList2Modal {
+  margin: 100px 0 0 0px;
+  /* PLAY THE WITH THE VALUES TO SEE GET THE DESIRED EFFECT */
+}
+
+#privateSchoolList3Modal {
+  margin: 100px 0 0 0px;
+  /* PLAY THE WITH THE VALUES TO SEE GET THE DESIRED EFFECT */
+}
+
+#publicSchoolList1Modal {
+  margin: 100px 0 0 0px;
+  /* PLAY THE WITH THE VALUES TO SEE GET THE DESIRED EFFECT */
+}
+
+#parentsQaModal {
+  margin: 100px 0 0 0px;
+  /* PLAY THE WITH THE VALUES TO SEE GET THE DESIRED EFFECT */
+}
+
+
+
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+  data-offset="60">
+
+  <!--Top part define-->
+  <include file="Public:main_header_sign_out" />
+
+  <!--why ontario college-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+    
+    <div class="row ">
+      <div class=" col-sm-12">
+        <p class="text-center" style="font-size: 25px; font-weight: bold;">留学加拿大的优势 </p>
+ 
+      <div class="panel panel-default； col-sm-offset-2 col-sm-2" style="font-size: 25px">
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                    教育质量 </p>
+        </div>
+      <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+                  世界一流的教学质量    </p>
+        
+        <p style="font-size: 20px; color: #222; ">
+                与美国教育齐头并进   </p>
+        <p style="font-size: 20px; color: #222; ">
+                学历全世界认可</p>
+      </div>
+      </div>
+      
+       <div class="panel panel-default；  col-sm-offset-1 col-sm-2" style="font-size: 25px">
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                   多元文化 </p>
+        </div>
+      <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+                  零距离接触多种文化    </p>
+        
+        <p style="font-size: 20px; color: #222; ">
+               与宗教碰撞出的火花   </p>
+        <p style="font-size: 20px; color: #222; ">
+                快速度过语言难关</p>
+      </div>
+      </div>
+      
+      <div class="panel panel-default； col-sm-offset-1 col-sm-2" style="font-size: 25px">
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                   冲击名校 </p>
+        </div>
+        <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+                 为申请名校打基础    </p>
+        <p style="font-size: 20px; color: #222; ">
+               高中三年完成后可与加拿大本国学生同样条件申请大学及奖学金   </p>
+        </div>
+      </div>
+     </div>
+    </div>
+    
+  </div>
+
+  <!--application material-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row ">
+ <div class=" col-sm-12">
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-center" style="font-size: 25px; font-weight: bold;">
+          如有意申请加拿大高中请联系 宏盛专业留学顾问！ </p>
+    </div>
+
+    <div class="panel-body" style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+      
+      <table class=" table">
+        <tbody>
+          <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;" class=" col-sm-1">
+                     大型寄宿私立中学</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" class=" col-sm-8">
+            <a data-toggle="modal" data-target="#privateSchoolList1Modal"    >
+                        规模较大的寄宿制私立高中。华人学生比例较高，多实行封闭式管理、提供食宿。
+                        适合刚出国门自律性较差，且英语基础薄弱的学生。此类高中教学模式符合中国留学生的学习习惯、具有较高的升名校比例，
+                        并与安省部分大学签订“直通协议”。学费在每年$25,000至$35,000加币之间</a>
+            </td>
+           </tr>
+           <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;">
+                      精品独立走读中学:</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" >
+             <a data-toggle="modal" data-target="#privateSchoolList2Modal"    >
+                         中等规模的独立走读制私立高中，华人学生在读比例因学校而异。
+                      此类学校多开设“名校保送班”、“剑桥预科课程”等特色项目。
+                      任课教师均为拥有执教资格证的西人，同时提供华人生活督导老师。
+                      适合国内学生直接申请或作为本地公校学生转学的目标院校。各校学费因项目不同差异较大。</a>
+            </td>
+           </tr>
+           <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;">
+                      名校直通类私立高中:</td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;" ">
+             <a data-toggle="modal" data-target="#privateSchoolList3Modal"    >
+                         以学生能够获取名牌大学OFFER为主要目的的小型私立高中。
+                     在校学生80-200，安省教育主管部门注册备案可授原生高中学分及毕业证。
+                     此类高中入学时间灵活(随时入学)、学期时间较短(多为2个月一学期，可选2至3门课)。
+                     学费在每学分$1,500至$1,800加币左右。重视出勤率、给分相对较高、配合学生需求申请目标院校。</a>
+            </td>
+          </tr>
+            
+           <tr>
+            <td style="vertical-align: middle; padding: 10px; color: #222222;">
+                        公立初中高中学校:
+            </td>
+            <td style="vertical-align: left; padding: 10px; color: #222222;">
+             <a data-toggle="modal" data-target="#publicSchoolList1Modal"    >
+                        多伦多教育局，多伦多天主教教育局，约克区教育局所属的中学</a>
+            </td>
+            </tr> 
+            
+            
+            
+        </tbody>
+      </table>
+      </div>
+            
+    </div>
+    
+     </div>
+    </div>
+  </div>
+
+<!--Hongsheng's help-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+      <div class="panel panel-default; " style="font-size: 25px">
+    
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                      宏盛加拿大留学规划师能帮您做什么 </p>
+        </div>
+
+        <div class="panel-body; "  style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                        选择宏盛留学规划师 
+              </td>
+            </tr>
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                        根据不同的升转学目的确定目标院校“所属类别” </td>
+            </tr>
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                     从目标院校所属类别中重点选择2-3所学校进行实地考察。 </td>
+            </tr>
+            
+            <tr>
+           
+            <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;">
+                    宏盛将全面负责填写院校申请表，跟崔沟通面试结果和OFFER, 安排调档或者转学分</td>
+            </tr>
+            
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;">
+                            后续转学后服务， 宏盛将继续提供选课，大学申请规划服务</td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </div>
+    </div>  
+
+  </div>
+    </div>
+  </div>
+
+<!--parents' channel-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+      <div class="panel panel-default; " style="font-size: 25px">
+    
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                     高中生留学加拿大，家长关心的40个问题 </p>
+        </div>
+
+        <div class="panel-body; "  style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <table class="table; col-sm-offset-2 col-sm-8" >
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                <a data-toggle="modal" data-target="#parentsQaModal" >家长关心的问题全面解答 </a>
+              </td>
+            </tr>
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+                       全面了解加拿大高中 </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      
+      </div>
+    </div>  
+
+  </div>
+    </div>
+  </div>
+
+
+
+
+    <!--Student'testimonials-->
+  <div class="container-fluid text-center"
+    style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; ">
+    
+    <div class="row;">
+
+    <div class=" col-sm-12">
+      <div class="panel panel-default; " style="font-size: 25px">
+    
+        <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+        <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                      STUDENTS' TESTIMONIALS</p>
+          <p class="text-center" style="font-size: 25px; font-weight: bold;">
+                      宏盛服务过的加拿大留学高中生如是说 </p>
+        </div>
+
+        <div class="panel-body; "  style="height: 450px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p class="text-center" style="font-size: 20px; ">
+                我通过朋友的介绍认识了宏盛，两次让她帮忙申请续学签，她认真负责的态度和耐心让我印象深刻，
+                平易近人的她不仅帮助我解决签证问题还给我传授了很多加拿大留学的知识让我受益匪浅。
+                后来我为了上大学想去一个更好的私立高中，yuki帮了我不少，不仅介绍各个学校，还带我去实地参观了学校，并且和不同学校的老师谈了自己的想法，
+                这绝对不是国内一般中介可以做的，在我入读新的私立高中之后，她时不时和老师联系关心我的学习情况，并且根据我之后想申请的学校专业，还帮我选课。
+                总是我非常的感激她，也许没有她，我现在还在被其他中介坑呢，留学道路也不会这么顺畅。
+              
+        </p>
+        
+        <p class="text-center" style="font-size: 20px; ">
+                  James <br> — 宏盛的学生
+        </p>
+      
+      </div>
+      
+       <p class="text-center" style="font-size: 20px; font-weight: bold;background-color: #3350ff; color: #dddddd; ">
+             申请学校或转学请联系我们：</p>
+             
+       <include file="Public:student_general_contact_msg_form" />      
+             
+             
+    </div>  
+    
+    
+        
+  </div>
+    </div>
+  </div>
+
+
+  <!-- Foot part define-->
+  <include file="Public:main_footer" />
+
+
+<!-- Private school list 1 modal-->
+  <div class="modal fade" id="privateSchoolList1Modal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title">大型寄宿私立中学</h4>
+        </div>
+        <div class="modal-body">
+         <p class="text-left" style="font-size: 20px; ">
+         Hamilton: 哥伦比亚国际学院 (Columbia International College)<br>
+         Mississauga: 宝迪学院 (Bronte College)<br>
+         Scarborough: 邦德国际学院 (Bond International College)<br>
+         Downtown: 达英国际学院 (TAIE International College)<br>
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+<!-- Private school list 2 modal-->
+  <div class="modal fade" id="privateSchoolList2Modal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title">精品独立走读中学</h4>
+        </div>
+        <div class="modal-body">
+         <p class="text-left" style="font-size: 20px; ">
+            North York: 加拿大普林斯顿中学(Prince Academy of Canada)<br>
+                    菲尔斯顿国王学院 (Fieldstone King’s College)<br>
+                    上麦迪逊学院 (Upper Madison College)<br>
+            Scarborough: 多伦多国际学院 (Toronto International College)<br>
+            Downtown: 比利玛学院 (Braemar College)<br>
+                    汉森国际高中(Hanson International Academy)<br>
+            Thornhill: 威斯菲尔德高中(Westfield Secondary School)<br>
+
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+<!-- Private school list 3 modal-->
+  <div class="modal fade" id="privateSchoolList3Modal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title">名校直通类私立高中</h4>
+        </div>
+        <div class="modal-body">
+         <p class="text-left" style="font-size: 20px; ">
+          North York: 约克兰德高中 (Yorkland High School)<br>
+                加拿大牛津高中(Oxford College of Canada)<br>
+          ULA高中(University Learning Academy)<br>
+          Downtown: 牛顿国际学院(Newton International College)<br>
+                伯明翰国际学院 (Birmingham International College of Canada)<br>
+          Hamilton: 多伦多国际中学 ( Toronto International Academy )<br>
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+<!-- Public school list 1 modal-->
+  <div class="modal fade" id="publicSchoolList1Modal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title">公立初中高中学校</h4>
+        </div>
+        <div class="modal-body">
+         <p class="text-left" style="font-size: 20px; ">
+                多伦多教育局： 所属的中学 <br>
+                多伦多天主教教育局: 所属的中学<br>
+                约克区教育局: 所属的中学<br>
+              
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+<!-- parents qa modal-->
+  <div class="modal fade" id="parentsQaModal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-ku">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title"> 家长关心的问题全面解答 </h4>
+        </div>
+        <div class="modal-body">
+          <table class="table; col-sm-12" >
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+                <p style="font-size: 25px; font-weight: bold;">          
+                          （1）为什么选择留学加拿大，加拿大的教育有哪些优势？ <br> 
+                </p>
+                          首先，加拿大教育体制是结合美国和英国而产生的，但是更偏向于美国，教学质量一流，所获学历在北美至世界均被承认。
+                          与中国的应试教育不同，加拿大高中更注重培养学生的实践和动手能力以及与他人合作协调能力，
+                          注重学生多方面的综合素质。综合能力的培养对孩子踏入社会之后就业是非常有利的。 <br>
+
+                          其次，纯英语环境，练就一口流利的英语。还有很多的社区、团队活动，可以让留学生尽早体验社会，提高各方面的能力。 <br>
+
+                          再次，世界上最大的移民国家之一，学生在加拿大专上毕业，最多可获得3年工作签证，并可以申请移民。 <br>
+
+                           第四，加拿大的留学费用较其他英语国家更为合理，每年仅需15万元人民币左右。 <br>
+
+                           最后，安全也是家长考虑的重要问题，加拿大是举世闻名的最安全的国家，民主制度成熟、政治体系安定，人权有充分保障，没有种族歧视问题。
+               
+              </td>
+            </tr>
+            <tr>
+             <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+             <p style="font-size: 25px; font-weight: bold;">          
+                        （2）高中生留学加拿大，有几条路？<br>
+                        </p>
+                        第一，   去加拿大读高中，拿到加拿大的高中毕业证，择校范围会更广。<br>
+                        第二，   高中毕业去读大学，可以选择直接录取、有条件双录取以及大学“预科”。
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+              <p style="font-size: 25px; font-weight: bold;">   
+                        （3）为什么送孩子去加拿大读高中？<br>
+
+                        到加拿大读高中可以让孩子尽早适应国外的教育体制与生活习惯，特别是语言方面，由于年龄小，学生可以在短时间内突破语言的障碍，
+                        学习语言速度快且将来不会有浓重的中国式英语的口音。更重要的是，学生在毕业后可以和本地学生一样，凭借高中毕业成绩，
+                        自由选择加拿大的任何一所大学，而不是像中国高三毕业没有语言成绩的学生，只能选择为数不到一半的双录取大学。
+                        初三、高一和高二在读的学生到加拿大读高中是上佳时期。拿到加拿大的高中毕业证是进入美加世界顶尖名校的敲门砖。
+
+              </td>
+            </tr>
+            
+        <tr>
+         <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+         <p style="font-size: 25px; font-weight: bold;">   
+               （4）加拿大高中有哪些课程？读几年？毕业有什么要求？<br>
+               </p>
+                    加拿大教育体制与中国接近，一般来说高中为三年，部分省份是四年（比如安大略省）。分别是十年级、十一年级、十二年级，修满30个学分即可毕业。其中18个是必修学分，12个是选修学分。每一门是一个学分。BC省要修满80个学分才能毕业，每科2.5~3.0个学分不等。
+
+                  十八个必修学分的课程包括：英文、第二语文法语、数学、科学（物理、化学、生物、电脑技术等科）、加拿大历史、加拿大地理、艺术、卫生体育、公民教育和职业导训、第三语言（汉语可算第三语言占一个学分）、社会科学人文、加拿大世界研究、商业研究等。
+
+                  十二个选修学分是为了学生上大学、学院选定今后的事业方向。学生可以从学校提供的一系列课程中，按照自己的个人兴趣进行选择。十至十二年级的学生，如果证明自己有专门的知识技能，可以不用修课自动获得四个选修学分，但每个学科领域不能超过两个学分。下面是选修学分的学科领域：会计生物商业 化学 古典研究 电脑和技术 戏剧 经济学 电子学 英文 英文作为第二语言研究 家庭研究 地理 历史 国际语言研究 法律 市场营销数学 音乐 体育卫生物理 视觉艺术等等。
+
+                  除此之外，BC省的高中毕业生还必须完成40个小时的社区义工的工作，有的省份在学生毕业前还要进行英文读写能力的考试。
+
+         </td>
+       </tr>
+    <tr>
+     <td style="vertical-align: middle; padding: 10px; background-color: #3350ff; color: #dddddd;" >
+     <p style="font-size: 25px; font-weight: bold;">   
+             （5）申请高中需要什么条件?<br>
+             </p>
+            对于公立高中来说，申请时需要提供最近2~3年的成绩单，要列出学过的所有科目（包括政治、体育等）。<br>
+            中英文各一份，都需要学校盖章。在申请时可填写三个自己心仪的学校。但如果这些学校没有名额，教育局将为你指定别的学校。一般来说，不需要参加面试。18 岁以下的孩子需要加籍公民或永久居民做监护人。
+        <br>
+           各个私立高中的录取条件不同，因校而异，大多数需要提交过去2~3年的成绩，列出所学科目，少数私立高中还需要面试。
+
+
+        </td>
+     </tr>         
+     <tr>
+      <td style="vertical-align: middle; padding: 10px; background-color: #ffd733; color: #222222;" >
+      <p style="font-size: 25px; font-weight: bold;">   
+          （6）想申请加拿大留学，请问能给我介绍一下该怎么办吗？ <br>
+        </p>
+          申请加拿大留学的主要流程如下：<br>
+
+          找宏盛留学顾问咨询出国事宜<br>
+
+          宏盛留学准备好申请材料向加拿大正规学校提出申请。<br>
+
+         取得学校正式录取通知书。<br>
+
+        准备申请加拿大留学签证的相关材料。<br>
+
+        将材料在线递交给签证中心申请留学签证。<br>
+
+        收到加拿大使馆签发的体检表。<br>
+
+        体检<br>
+
+        收到加拿大使馆签发的准许入境函。<br>
+
+        买机票。<br>
+
+        赴加拿大学校报到，入学。<br>
+
+        开始在加拿大的留学生活。<br>
+
+
+         </td>
+       </tr>       
+          </tbody>
+        </table>
+         <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+
+
+
+</body>
+</html>

@@ -14,13 +14,21 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#home">主页</a></li>
 				<li><a href="#services">文书服务</a></li>
-				<li><a href="#services">学校申请</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">学校申请 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:U('Index/high_school')}">初中高中申请</a></li>
+            <li><a href="{:U('Index/college')}">公立学院</a></li>
+            <li><a href="{:U('Index/university')}">大学申请</a></li>
+            <li><a href="{:U('Index/post_graduate')}">研究生申请</a></li>
+            <li><a href="{:U('Index/language')}">语言学校申请</a></li>
+          </ul>
+        </li>
+
 				<li><a href="#features">签证申请</a></li>
 				<li><a href="#solution">后续服务</a></li>
 				<li><a href="#solution">移民申请</a></li>
-				<li><a href="#contact">学校公略</a></li>
-				<li><a href="#contact">关于我们</a></li>
-				<li><a href="#contact">联系我们</a></li>
+				<li><a href="{:U('Index/about_us')}">关于我们</a></li>
+				
 
 			</ul>
 		</div>

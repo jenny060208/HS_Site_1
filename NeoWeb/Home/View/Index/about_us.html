@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<TITLE>Neo Reward System</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap CSS definition-->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato"
+	rel="stylesheet" type="text/css">
+
+
+
+
+<!-- main page style CSS definition -->
+<link rel="stylesheet" href="__CSS__/mainpage.css" type="text/css">
+<!-- Script files definition -->
+<script type="text/javascript" src="__JS__/form_utilities.js"></script>
+<script src="https://use.fontawesome.com/12eb9f213d.js"></script>
+
+<script type="text/javascript">
+      jQuery(function($)
+      {
+        <!-- Process the get in touch form -->
+        $("#button_general_enquiry_msg_form").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('general_enquiry_msg_form');
+          objArray["name"] = document.getElementById('general_enquiry_name');
+          objArray["email"] = document.getElementById('general_enquiry_email');
+          objArray["msg"] = document.getElementById('general_enquiry_fm_message');
+          objArray["action"] = "{:U('Index/getInTouchProc')}";
+          generalEnquiryFormProcess(objArray);
+        });
+        
+        <!-- Process the get more info form -->
+        $("#button_get_more_info").click(function ()
+        {
+          var objArray = [];　 // Create a new array
+          objArray["form"] = document.getElementById('get_more_info_form');
+          objArray["name"] = document.getElementById('more_name');
+          objArray["email"] = document.getElementById('more_email');
+          objArray["phone"] = document.getElementById('more_phone');
+          objArray["company_name"] = document.getElementById('more_company_name');
+          objArray["action"] = "{:U('Index/getMoreServiceInfoProc')}";
+          getMoreInfoFormProcess(objArray);
+          
+          
+      
+          
+          
+          
+        });
+        
+      });
+    </script>
+
+
+
+
+<style>
+.fa-vc {
+	line-height: inherit !important;
+}
+</style>
+
+
+</head>
+
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+	data-offset="60">
+
+	<!--Top part define-->
+	<include file="Public:main_header_sign_out" />
+
+	<!-- user part -->
+	<div id="home" class="container-fluid text-center"
+		style="background-color: #ca856a; color: #fff; font-family: Montserrat, sans-serif; padding: 100px 25px;">
+		
+		<div class="row ">
+      <div class="col-sm-offset-2 col-sm-8">
+
+	
+    <div class="panel panel-default" style="font-size: 25px">
+    
+     <div class="panel-header text-center" style="background-color: #eeeeee;color: #222;">
+      <p class="text-center" style="font-size: 25px; font-weight: bold;">
+          关于我们 </p>
+    </div>
+    
+    
+      <div class="panel-body" style="height: 350px; text-align: left;background-color: #eeeeee;color: #222;">
+        <p style="font-size: 20px;">
+                宏盛留学移民中心，专业从事加拿大名校申请咨询业务，位于多伦多市北约克中心。
+                短短数十载已经发展成为一家以留学申请为核心，主办学签，工签，移民，等综合性服务咨询机构。
+                先后为数以千计的留学生成功申请到包括UT SFU UBC YORK在内的多所名校大学。
+                留学移民所有案例由专业ICCRC持牌律师团队和顾问处理，为您做全方位的材料包装，留学规划设计，及咨询服务。 
+        </p>
+        
+       <p style="font-size: 20px; color: #222; ">
+               西人团队的人脉，骄人的成功率成就了我们今日业界的成绩和良好的口碑。
+              成功率，满意度是我们追求的唯一标准, 我们将悉心解决你在留学移民中遇到的一切问题。
+        </p>
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+               十余年申请经验,行业内最权威的顾问团队
+        </p>
+        
+        <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                  长期稳校方关系,上千学生申请的成功案例
+        </p>
+         <p class="text-center" style="font-size: 20px; font-weight: bold; ">
+                  西人团队的人脉,不成功不收费的承诺保证
+        </p>
+      </div>
+            
+    </div>
+       
+   
+
+    </div>
+		</div>
+			
+	</div>
+
+
+
+		
+
+
+	<!-- Foot part define-->
+	<include file="Public:main_footer" />
+
+
+</body>
+</html>
